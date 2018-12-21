@@ -5,8 +5,8 @@ import AirInfo from './components/AirInfo'
 class App extends Component {
 
     state = {
-        info: {},
-        shouldRender: false
+        shouldRender: false,
+        id:0
     };
 
     getData = () => {
@@ -15,7 +15,8 @@ class App extends Component {
         if (id > 0) {
             console.log("ładuję dane");
             this.setState({
-                shouldRender: true
+                shouldRender: true,
+                id
             });
 
         }
@@ -35,10 +36,13 @@ class App extends Component {
                         <div className="select">
                             <select name="region" id="regions" onChange={this.getData}>
                                 <option value="0">Wybierz dzielnicę</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
+                                <option value="400">al. Krasińskiego</option>
+                                <option value="401">ul. Bujaka</option>
+                                <option value="402">ul. Bulwarowa</option>
+                                <option value="10121">ul. Dietla</option>
+                                <option value="10123">ul. Złoty Róg</option>
+                                <option value="10139">os. Piastów</option>
+                                <option value="10447">ul. Wadów</option>
                             </select>
                         </div>
                     </form>
@@ -47,7 +51,7 @@ class App extends Component {
                 <section id="airInfo">
                     <AirInfo
                         shouldRender={this.state.shouldRender}
-                        info={this.state.info}
+                        id={this.state.id}
                     />
                 </section>
 

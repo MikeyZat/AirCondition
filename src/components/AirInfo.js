@@ -1,14 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import DataWrapper from "./DataWrapper";
-class AirInfo extends Component {
 
-    render(){
-        return (this.props.shouldRender)? (
-                <DataWrapper data={this.props.info}/>
+const AirInfo = ({id,shouldRender})=>{
+
+
+        return (shouldRender)? (
+                <DataWrapper id={id}/>
                 ):
                 null;
 
-    }
-}
+
+};
 
 export default AirInfo;
