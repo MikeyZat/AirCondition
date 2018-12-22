@@ -1,33 +1,29 @@
 .menu{
-
+padding:0;
 }
 
 ul.menu{
     list-style: none;
-    text-align: center;
 }
 
 ul.menu li{
     display: inline-block;
-}
-
-ul.menu li button{
     background: transparent;
-    border: #ae6011 1px solid;
+    border: #bb7604 1px solid;
     padding:5px 10px 5px 10px;
     color:#b8b8b2;
     font-size:16px;
     font-weight:600;
 }
 
-ul.menu li button:hover{
+ul.menu li:hover{
     background: #f39c12;
     color:white;
     cursor:pointer;
 }
 
-ul.menu li button.active{
-    background: #ae6011;
+ul.menu li.active{
+    background: #bb7604;
     color:white;
 }
 

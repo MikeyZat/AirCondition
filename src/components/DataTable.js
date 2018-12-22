@@ -1,9 +1,20 @@
 import React from 'react';
 
-const DataTable = ({data}) =>{
+const DataTable = ({data}) => {
 
+    let dataList = [];
 
-        return <div>xD</div>;
+    for(let key in data){
+        if(data[key])
+            dataList.push(
+                <li key={key}>{key}: {data[key]}</li>
+            )
+    }
+    return <div>
+        <ul>
+            {dataList}
+        </ul>
+    </div>;
 
 };
 
