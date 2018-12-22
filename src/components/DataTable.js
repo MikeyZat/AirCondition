@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../themes/DataTable.css"
 const DataTable = ({data}) => {
 
     let dataList = [];
@@ -7,15 +7,15 @@ const DataTable = ({data}) => {
     for(let key in data){
         if(data[key])
             dataList.push(
-                <li key={key}>{key}: {data[key]}</li>
+                <li key={key}><span className="sensor"> {key}:</span> {data[key]}</li>
             );
         else
             dataList.push(
-                <li key={key}>{key}: Brak aktualnych danych</li>
+                <li key={key}><span className="sensor">{key}:</span> Brak aktualnych danych</li>
             );
     }
     return <div>
-        <ul>
+        <ul className="sensors">
             {dataList}
         </ul>
     </div>;
