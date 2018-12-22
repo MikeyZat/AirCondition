@@ -19,6 +19,11 @@ class App extends Component {
                 id
             });
 
+        }else{
+            this.setState({
+                shouldRender: false,
+                id
+            })
         }
 
     };

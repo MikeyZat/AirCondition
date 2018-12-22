@@ -6,7 +6,10 @@ import "../themes/DataWrapper.css"
 class DataWrapper extends Component {
 
     state = {
-        data: [],                         //data is an array of objects with data (index 0 - last info,
+        data: [{
+            pm25:54.3,
+            pm10:12.3
+        }],                         //data is an array of objects with data (index 0 - last info,
         index:0                                // index 1 - 6 hours ago, index 2 - 24 hours ago
     };
 
@@ -19,7 +22,7 @@ class DataWrapper extends Component {
     render() {
         return (this.state.data.length)?
             (<div className="data-container loading">
-                <TimeSwapper onClick={this.changeIndex}/>
+                <TimeSwapper onClick={this.changeIndex} index={this.state.index}/>
                 <Emoticon data = {this.state.data[this.state.index]}/>
                 <DataTable data = {this.state.data[this.state.index]}/>
             </div>)
