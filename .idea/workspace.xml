@@ -29,7 +29,7 @@
     <session id="-1803018478">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.opened" value="2" />
@@ -41,7 +41,7 @@
           <entry key="html" value="63" />
           <entry key="js" value="4905" />
           <entry key="md" value="177" />
-          <entry key="txt" value="16" />
+          <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -49,7 +49,7 @@
           <entry key="CSS" value="1047" />
           <entry key="HTML" value="63" />
           <entry key="JavaScript" value="4905" />
-          <entry key="PLAIN_TEXT" value="193" />
+          <entry key="PLAIN_TEXT" value="206" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -224,7 +224,7 @@
       <option name="presentableId" value="Default" />
       <updated>1545341540561</updated>
       <workItem from="1545341542043" duration="5937000" />
-      <workItem from="1545429914902" duration="15659000" />
+      <workItem from="1545429914902" duration="15678000" />
     </task>
     <task id="LOCAL-00001" summary="started">
       <created>1545346938411</created>
@@ -254,15 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545486564496</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="halfway? done">
+      <created>1545499188795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1545499188795</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21596000" />
+    <option name="totallyTimeSpent" value="21615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -316,7 +322,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started" />
     <MESSAGE value="moving on" />
-    <option name="LAST_COMMIT_MESSAGE" value="moving on" />
+    <MESSAGE value="halfway? done" />
+    <option name="LAST_COMMIT_MESSAGE" value="halfway? done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.css" />

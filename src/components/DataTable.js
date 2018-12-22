@@ -8,7 +8,11 @@ const DataTable = ({data}) => {
         if(data[key])
             dataList.push(
                 <li key={key}>{key}: {data[key]}</li>
-            )
+            );
+        else
+            dataList.push(
+                <li key={key}>{key}: Brak aktualnych danych</li>
+            );
     }
     return <div>
         <ul>
