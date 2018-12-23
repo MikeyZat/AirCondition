@@ -6,3 +6,9 @@ ul.sensors li{
 .sensor{
     font-weight:bold;
 }
+
+#myCanvas{
+    width:300px;
+    height:200px;
+    margin-bottom: 20px;
+}

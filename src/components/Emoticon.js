@@ -32,7 +32,7 @@ const Emoticon = ({data}) => {
     if(pollution===0){
         return <h2><i className="em em-blush"></i>Dobra jakość powietrza</h2>;
     }else if(pollution<3){
-        return <h2><i className="em em-innocent"></i>Bywało lepiej</h2>;
+        return <h2><i className="em em-neutral_face"></i>Bywało lepiej</h2>;
     }else if(pollution<5){
         return <h2><i className="em em-face_with_rolling_eyes"></i>Odradza się aktywność fizyczną na zewnątrz</h2>;
     }else if(pollution<7){

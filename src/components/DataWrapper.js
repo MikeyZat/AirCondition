@@ -7,7 +7,7 @@ import axios from 'axios';
 class DataWrapper extends Component {
 
     state = {
-        data: [],//data is an array of objects with data (index 0 - last info,
+        data: [],                               //data is an array of objects with data (index 0 - last info,
         index:0                                // index 1 - 6 hours ago, index 2 - 24 hours ago
     };
 
@@ -18,7 +18,20 @@ class DataWrapper extends Component {
     };
 
     componentDidMount(){
-        let id = this.props.id;
+        this.getSensorAndData(this.props.id);
+
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.id !== prevProps.id) {
+            this.setState({
+                data: []
+            });
+            this.getSensorAndData(this.props.id);
+        }
+    }
+
+    getSensorAndData = (id) =>{
         axios.get('https://cors-escape.herokuapp.com/https://api.gios.gov.pl/pjp-api/rest/station/sensors/'+id)
             .then(res => {
                 let sensors=[];
@@ -33,8 +46,7 @@ class DataWrapper extends Component {
             .catch(reason => {
                 console.log(reason);
             });
-
-    }
+    };
 
     getData = (sensors) =>{
         let newData=[{},{},{}];
