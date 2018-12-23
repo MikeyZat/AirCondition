@@ -32,9 +32,9 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="app-container">
-                    <div>
+                    <div className="form-container">
                         <header>
-                            <h1>Sprawdź stan powietrza i pogodę</h1>
+                            <h1>Sprawdź stan powietrza</h1>
                         </header>
                         <section id="chooseRegion">
                             <form>
