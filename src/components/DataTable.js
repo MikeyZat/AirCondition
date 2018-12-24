@@ -26,7 +26,7 @@ class DataTable extends Component{
                     break;
                 case "pył zawieszony PM2.5":
                     params.push({
-                        value:this.props.data[key] / 30,
+                        value:this.props.data[key] / 25,
                         name: 'PM2.5'
                     });
                     break;
@@ -38,13 +38,13 @@ class DataTable extends Component{
                     break;
                 case "dwutlenek siarki":
                     params.push({
-                        value:this.props.data[key] / 80,
+                        value:this.props.data[key] / 125,
                         name: 'SO2'
                     });
                     break;
                 case "benzen":
                     params.push({
-                        value:this.props.data[key] / 10,
+                        value:this.props.data[key] / 5,
                         name: 'benzen'
                     });
                     break;
@@ -64,17 +64,17 @@ class DataTable extends Component{
         ctx.fillStyle = "#66cc66";
         let width = 10; //bar width
         let X = 15; // first bar position
-        ctx.fillRect(X,130,180,1);
-        ctx.fillText("poziom dopuszczalny",200,130);
+        ctx.fillRect(X,120,180,1);
+        ctx.fillText("poziom dopuszczalny",200,120);
         for (let i =0; i<params.length; i++) {
             ctx.fillStyle = '#f39c12';
             let h = Math.floor(params[i].value*20);
-            ctx.fillRect(X,canvas.height - h,width,h);
+            ctx.fillRect(X,canvas.height - h-10,width,h);
 
             X +=  width+25;
             /* text to display Bar number */
             ctx.fillStyle = '#f39c12';
-            ctx.fillText(params[i].name,X-width-30,canvas.height - h -10);
+            ctx.fillText(params[i].name,X-width-30,canvas.height );
         }
     };
 
@@ -87,6 +87,8 @@ class DataTable extends Component{
 
 
     render() {
+
+
         let dataList = [];
 
         for (let key in this.props.data) {

@@ -69,7 +69,7 @@ class DataWrapper extends Component {
         return (this.state.data.length)?
             (<div className="data-container">
                 <TimeSwapper onClick={this.changeIndex} index={this.state.index}/>
-                    <Emoticon data = {this.state.data[this.state.index]}/>
+                    <Emoticon changeColor = {this.props.changeColor} data = {this.state.data[this.state.index]}/>
                     <DataTable data = {this.state.data[this.state.index]}/>
             </div>)
             :

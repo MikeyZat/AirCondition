@@ -27,6 +27,30 @@ class App extends Component {
 
     };
 
+    changeColor = (colorCase) =>{
+        let body = document.getElementsByTagName("body")[0];
+        if(body.classList.length) body.classList.remove(body.classList);
+        switch(colorCase){
+            case 0:
+                body.classList.add("green");
+                break;
+            case 1:
+                body.classList.add("green-yellow");
+                break;
+            case 2:
+                body.classList.add("yellow");
+                break;
+            case 3:
+                body.classList.add("yellow-red");
+                break;
+            case 4:
+                body.classList.add("red");
+                break;
+            default:
+                break;
+        }
+    };
+
     render() {
 
         return (
@@ -58,6 +82,7 @@ class App extends Component {
                         <AirInfo
                             shouldRender={this.state.shouldRender}
                             id={this.state.id}
+                            changeColor = {this.changeColor}
                         />
                     </section>
                 </div>
