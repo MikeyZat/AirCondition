@@ -12,3 +12,20 @@ ul.sensors li{
     height:200px;
     margin-bottom: 20px;
 }
+
+ul.sensors li:empty{
+    list-style: none;
+    width:250px;
+    height:15px;
+    margin:15px;
+    background-color: #38526c;
+    border-radius: 4px;
+}
+
+#myCanvas:empty{
+    background-color: #38526c;
+    border-radius:10px;
+    width:300px;
+    height:200px;
+    margin-bottom: 20px;
+}

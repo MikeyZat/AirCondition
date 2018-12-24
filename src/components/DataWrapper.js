@@ -75,14 +75,14 @@ class DataWrapper extends Component {
             :
             (<div className="data-container loading">
                     <div className="lds-roller">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
                     </div>
                     <span className="ld-span">Ładuję dane...</span>
             </div>
