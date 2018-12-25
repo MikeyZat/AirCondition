@@ -1,13 +1,13 @@
 {
   "main.css": "/AirCondition/static/css/main.6df2a615.chunk.css",
-  "main.js": "/AirCondition/static/js/main.1c46df33.chunk.js",
-  "main.js.map": "/AirCondition/static/js/main.1c46df33.chunk.js.map",
+  "main.js": "/AirCondition/static/js/main.8997da03.chunk.js",
+  "main.js.map": "/AirCondition/static/js/main.8997da03.chunk.js.map",
   "static/js/1.992eeab5.chunk.js": "/AirCondition/static/js/1.992eeab5.chunk.js",
   "static/js/1.992eeab5.chunk.js.map": "/AirCondition/static/js/1.992eeab5.chunk.js.map",
   "runtime~main.js": "/AirCondition/static/js/runtime~main.173b4227.js",
   "runtime~main.js.map": "/AirCondition/static/js/runtime~main.173b4227.js.map",
   "static/css/main.6df2a615.chunk.css.map": "/AirCondition/static/css/main.6df2a615.chunk.css.map",
   "index.html": "/AirCondition/index.html",
-  "precache-manifest.ec1ba385e5ff377e462f12887568e826.js": "/AirCondition/precache-manifest.ec1ba385e5ff377e462f12887568e826.js",
+  "precache-manifest.6cb09647e95d549accede8548e80b2ee.js": "/AirCondition/precache-manifest.6cb09647e95d549accede8548e80b2ee.js",
   "service-worker.js": "/AirCondition/service-worker.js"
 }
