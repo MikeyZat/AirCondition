@@ -3,67 +3,78 @@ import "../themes/Emoticon.css"
 
 class Emoticon extends Component {
 
+    constructor(props) {
+        super(props);
+        this.isDataLoaded = false;
+        this.isDataAvailable = false
+    }
+
     componentDidMount() {
         setTimeout(() => {
             this.forceUpdate()
         }, 1000);
     }
 
+    calculatePollution = (data) => {
+        let pollution = 0;
+        this.isDataLoaded = false;                  //bool flag to determine if data has loaded properly
+        this.isDataAvailable = false;                  //bool flag to determine if there is any available data
+        for (let key in data) {
+            this.isDataLoaded = true;
+            if (data.hasOwnProperty(key))
+                switch (key) {
+                    case "pył zawieszony PM10":
+                        if (data[key]) {
+                            this.isDataAvailable = true;
+                            pollution += (Math.floor(data[key] / 40));
+                        }
+                        break;
+
+                    case "pył zawieszony PM2.5":
+                        if (data[key]) {
+                            this.isDataAvailable = true;
+                            pollution += (Math.floor(data[key] / 20));
+                        }
+                        break;
+                    case "dwutlenek azotu":
+                        if (data[key]) {
+                            this.isDataAvailable = true;
+                            pollution += (Math.floor(data[key] / 80));
+                        }
+                        break;
+                    case "dwutlenek siarki":
+                        if (data[key]) {
+                            this.isDataAvailable = true;
+                            pollution += (Math.floor(data[key] / 100));
+                        }
+                        break;
+                    case "benzen":
+                        if (data[key]) {
+                            this.isDataAvailable = true;
+                            pollution += (Math.floor(data[key] / 5));
+                        }
+                        break;
+                    case "tlenek węgla":
+                        if (data[key]) {
+                            this.isDataAvailable = true;
+                            pollution += (Math.floor(data[key] / 3000));
+                        }
+                        break;
+                    default:
+                        break;
+                }
+
+        }
+        return pollution
+    };
+
     render() {
         let {data, changeColor} = this.props;
-        let pollution = 0;
-        let b = false;                  //bool flag to determine if data has loaded properly
-        let d = false;                  //bool flag to determine if there is any available data
-        for (let key in data) {
-            b = true;
-            if(data.hasOwnProperty(key))
-            switch (key) {
-                case "pył zawieszony PM10":
-                    if (data[key]) {
-                        d = true;
-                        pollution += (Math.floor(data[key] / 40));
-                    }
-                    break;
-
-                case "pył zawieszony PM2.5":
-                    if (data[key]) {
-                        d = true;
-                        pollution += (Math.floor(data[key] / 20));
-                    }
-                    break;
-                case "dwutlenek azotu":
-                    if (data[key]) {
-                        d = true;
-                        pollution += (Math.floor(data[key] / 80));
-                    }
-                    break;
-                case "dwutlenek siarki":
-                    if (data[key]) {
-                        d = true;
-                        pollution += (Math.floor(data[key] / 100));
-                    }
-                    break;
-                case "benzen":
-                    if (data[key]) {
-                        d = true;
-                        pollution += (Math.floor(data[key] / 5));
-                    }
-                    break;
-                case "tlenek węgla":
-                    if (data[key]) {
-                        d = true;
-                        pollution += (Math.floor(data[key] / 3000));
-                    }
-                    break;
-                default:
-                    break;
-            }
-
-        }
-        if (!b) {
+        let pollution = this.calculatePollution(data);
+        if (!this.isDataLoaded) {
             return <h2></h2>
         }
-        if(!d){
+        if (!this.isDataAvailable) {
             return <h2><i className="em em-neutral_face"> </i>Sprawdź później</h2>;
         }
         if (pollution === 0) {
