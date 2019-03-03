@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "96a324f51c0399f0e9c5",
-    "url": "/AirCondition/static/css/main.6df2a615.chunk.css"
+    "revision": "ee3d57d1d4d21048e953",
+    "url": "/AirCondition/static/css/main.22fffd37.chunk.css"
   },
   {
-    "revision": "96a324f51c0399f0e9c5",
-    "url": "/AirCondition/static/js/main.96a324f5.chunk.js"
+    "revision": "ee3d57d1d4d21048e953",
+    "url": "/AirCondition/static/js/main.ee3d57d1.chunk.js"
   },
   {
     "revision": "992eeab57fe488dbaf35",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/AirCondition/static/js/runtime~main.173b4227.js"
   },
   {
-    "revision": "53e2890904ad09785ae3aea469c7a9e0",
+    "revision": "5ec67729f5aa28e0ee32ea3ebe3ed99e",
     "url": "/AirCondition/index.html"
   }
 ];

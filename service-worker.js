@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/AirCondition/precache-manifest.bca080f801d67cc4e534b9af3a17ab06.js"
+  "/AirCondition/precache-manifest.cb379ec7261f514378fe9a84ace1c132.js"
 );
 
 workbox.clientsClaim();
