@@ -51,9 +51,10 @@ class DataTable extends Component {
                         });
                         break;
                     case "tlenek węgla":
+                        console.log("działam");
                         params.push({
                             value: this.props.data[key] / 3000,
-                            name: 'CO2'
+                            name: 'CO'
                         });
                         break;
                     default:

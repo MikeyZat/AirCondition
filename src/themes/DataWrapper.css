@@ -92,5 +92,10 @@
     margin-top:50px;
 }
 
-
+.error{
+    margin:auto;
+    text-align: center;
+    width:300px;
+    display:block;
+}
 
